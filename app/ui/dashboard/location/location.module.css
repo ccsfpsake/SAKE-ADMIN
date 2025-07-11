@@ -1,0 +1,242 @@
+.mapContainer {
+  background-color: var(--bgSoft);
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 1rem auto;
+  width: 100%;
+  border: 1px solid #4e97da;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.searchContainer {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.searchInput {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #dcdfe3;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 300px;
+  width: fit-content;
+}
+
+.searchInput:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.15);
+}
+
+
+/* 🆕 Idle Container and Table */
+.idleContainer {
+  background-color: var(--bgSoft);
+  padding: 1.5rem;
+  margin: 1rem auto;
+  border: 1px solid #4e97da;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.idleTableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.idleTable {
+  min-width: 800px; /* Or however wide your table needs to be */
+  width: auto;      /* Important: don't force it to fit */
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+  font-size: 0.95rem;
+}
+
+
+
+.idleContainer h3 {
+  font-size: 1.25rem;
+  color: #d32f2f;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.idleCard {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background: #fff;
+}
+.chatContainer {
+  margin-top: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chatMessages {
+  height: 200px;
+  overflow-y: auto;
+  background: white;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.chatMessage {
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.chatInputBox {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chatInput {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.notificationDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  margin-left: 8px;
+}
+
+.sendButton {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.idleCard button {
+  background-color: #1976d2;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.idleCardButtons {
+  background-color: #1976d2;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  width: 380px;       /* Fixed width */
+  height: 60px;       /* Fixed height */
+  box-sizing: border-box;
+}
+
+
+.idleCard button:hover {
+  background-color: #1565c0;
+}
+
+.idleTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.idleTable th,
+.idleTable td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  word-break: break-word;
+    text-align: center;
+}
+
+.idleTable th {
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+.idleTable td {
+  color: #333;
+}
+.noData {
+  font-size: 14px;
+  color: #888;
+  margin-top: 15px;
+}
+.loading {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .mapContainer,
+  .idleContainer {
+    padding: 1rem;
+  }
+  .idleCardButtons {
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .idleTable th,
+  .idleTable td {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .searchInput {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchInput {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+  .idleCardButtons {
+    width: 100%;
+    height: 45px;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  .idleTableWrapper {
+    overflow-x: auto;
+  }
+
+   .idleTable th,
+  .idleTable td {
+     font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Reduced gap between elements */
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  font-family: 'sans-serif';
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.semititle {
+  font-weight: 10;
+  color: rgb(101, 101, 101);
+  font-size: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 4px; /* Reduce the margin-top here to decrease space between title and table */
+}
+
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.table th {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: none; /* This will keep the text in its original case */
+}
+
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Toggle Switch */
+.toggleSwitch {
+  width: 50px;
+  height: 24px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  background-color: #ccc; /* Default gray for inactive */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.toggleSwitch.active {
+  background-color: #4caf50; /* Green for active */
+}
+
+.toggleSwitch.inactive {
+  background-color: #f44336; /* Red for inactive */
+}
+
+.switchKnob {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.active .switchKnob {
+  transform: translateX(26px); /* Moves to the right */
+}

@@ -1,0 +1,330 @@
+.container {
+  background-color: var(--bgSoft);
+  padding: 30px;
+  border-radius: 15px;
+  margin: 20px auto;
+  width: 100%;
+  border: 1px solid #4e97da;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.statusDropdown {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  background-color: #fff;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  min-width: 130px;
+  appearance: none; 
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg fill='%23333' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+.statusDropdown:hover,
+.statusDropdown:focus {
+  border-color: #0070f3;
+  box-shadow: 0 0 5px rgba(0, 112, 243, 0.5);
+  outline: none;
+}
+
+.table select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.table select:hover {
+  border-color: #1877f2;
+}
+
+.table select:focus {
+  outline: none;
+  border-color: #1877f2;
+  box-shadow: 0 0 5px rgba(24, 119, 242, 0.5);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.userImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.noData {
+  text-align: center;
+  padding: 10px;
+  color: #999;
+  font-style: italic;
+}
+
+.search {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+.table {
+  width: 100%;
+  min-width: 800px;
+  font-size: 16px;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+.table th, .table td {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.table th {
+  background: #1976d2;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.table td:last-child, .table th:last-child {
+  border-right: none;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.edit, .updateButton {
+  background-color: #4caf50;
+  color: white;
+}
+
+.edit:hover, .updateButton:hover {
+  background-color: #388e3c;
+}
+
+.delete {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+}
+
+.delete:hover {
+  background-color: #e53935;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  background-color: #1565c0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #0d47a1;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.modalicon {
+  color: #f39c12;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.modalIcon {
+  background-color: #fde9e9;
+  color: red;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  font-size: 24px;
+}
+
+.modal h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.modal p {
+  font-size: 14px;
+  color: #666;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.cancelButton {
+  background-color: #f1f1f1;
+  color: #333;
+  border: 1px solid red;
+}
+
+.cancel:hover {
+  background-color: #e0e0e0;
+}
+
+.saveButton {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.saveButton:hover {
+  background-color: #388e3c;
+}
+.update {
+  background-color: #1b69df;
+  color: white;
+}
+
+.update:hover {
+  background-color: #175bc3;
+}
+.addButton {
+  background-color: #1b69df;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background-color: #0d47a1;
+}
+
+@media (max-width: 768px) {
+  .actions {
+    gap: 10px;
+  }
+  .table {
+    font-size: 14px;
+  }
+  .modal {
+    padding: 30px;
+  }
+  .pagination button {
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+  .table th, .table td {
+    padding: 10px;
+  }
+  .modalContent {
+    width: 100%;
+    padding: 15px;
+  }
+  .button, .addButton, .saveButton, .delete {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {  
+    padding: 20px;
+  }
+  .actions {
+    gap: 10px;
+    justify-content: center;
+  }
+}

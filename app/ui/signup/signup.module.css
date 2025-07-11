@@ -1,0 +1,429 @@
+.container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #ecf0f4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.logo {
+  max-width: 60%;
+  height: auto;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 12px 16px 24px rgba(0, 13, 255, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: left;
+  border: 2px solid #007bff;
+  height: 600px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #007bff;
+  text-align: center;
+  margin: 1px 0 20px;
+  line-height: 1;
+}
+
+.progressBar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-weight: bold;
+}
+
+.stepLabel {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #000000;
+  text-align: center;
+}
+
+.stepSeparator {
+  height: 4px;
+  background-color: #e0e0e0;
+  flex: 1;
+  margin: 0 1rem;
+  border-radius: 2px;
+  margin-top: 20px;
+}
+
+.completed .stepNumber {
+  background-color: #1b00ff;
+  color: #fff;
+}
+
+.completed .stepLabel {
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
+  margin-bottom: 3px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  margin-left: 10px;
+}
+
+.labelmodal {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  margin-left: 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.input:focus {
+  outline: none; /* Removes default outline */
+  border-color: #0070f3;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  color: black; /* Ensures text color remains black */
+}
+.preview {
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 3px;
+  margin-top: 1px;
+  font-weight: 300;
+}
+
+.preview p {
+  margin-bottom: 1px;
+  font-size: 17px;
+}
+
+.preview h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 0.50rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 7rem;
+  transition: background-color 0.3s, border-color 0.3s;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 9px;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.blueButton {
+  background-color: #1b00ff;
+  color: white;
+  border: 2px solid #1b00ff;
+}
+
+.blueButton:hover {
+  background-color: #0e00cc;
+  border-color: #0e00cc;
+}
+
+.grayButton {
+  background-color: #d1d5db;
+  color: #374151;
+  border: none;
+}
+.grayButton:hover {
+  background-color: #e5e7eb;
+}
+
+.greenButton {
+  background-color: green;
+  color: white;
+  border: 2px solid green;
+}
+
+.greenButton:hover {
+  background-color: #46ae46;
+  border-color: #46ae46;
+}
+
+.link {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginLink {
+  text-align: center;
+  font-size: 15px;
+}
+
+.link:hover {
+  color: #005bb5;
+  text-decoration: underline;
+}
+
+.link:focus {
+  outline: none;
+  color: #003d80;
+  text-decoration: underline;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal p {
+  font-size: 1rem;
+}
+.modalOver {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalterm {
+  position: relative;
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 400px;
+  text-align: justify;
+  overflow-y: auto;
+}
+
+.modalterm h2,
+.modal h2 {
+  text-align: center;
+  font-size: 30px;
+}
+.modalterm p{
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.modal {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.icon {
+  font-size: 30px;
+  color: rgb(21, 189, 21);
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.closeButton:hover {
+  color: red;
+}
+
+.buttonmodal {
+  display: flex;
+  margin-top: 0.5rem;
+  width: 100%;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.parentContainer {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 7rem;
+  transition: background-color 0.3s, border-color 0.3s;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 9px auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .loginLink {
+    text-align: center;
+    font-size: 10px;
+  }
+  .checkboxGroup .label
+{
+  text-align: center;
+  font-size: 10px;
+}
+  .logo {
+    padding-right: 0;
+    margin-bottom: 2px;
+  }
+
+  .progressBar {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .stepNumber,
+  .stepLabel {
+    text-align: center;
+    font-size: 0.6rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .preview {
+    font-size: 18px;
+  }
+
+  .modalOverlay {
+    padding: 20px;
+  }
+
+
+  .modal {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .modal h2 {
+    font-size: 1rem;
+  }
+
+  .modal p {
+    font-size: 0.85rem;
+  }
+  
+
+  .preview h3 {
+    font-size: 18px;
+    align-items: center;
+  }
+
+  .modalOverlay {
+    padding: 15px;
+    overflow-y: auto;
+  }
+
+  .modalterm {
+    max-width: 90%;
+    max-height: 60%;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  .modalterm h2 {
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+  .modalterm {
+    text-align: left;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .modal {
+    text-align: center;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}

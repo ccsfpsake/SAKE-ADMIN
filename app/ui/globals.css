@@ -1,0 +1,45 @@
+:root {
+    --bg: #dddedf;
+    --bgSoft: #ffffff;
+    --text: rgb(0, 0, 0);
+    --textSoft: #282828;
+    --fontf: sans-serif;
+}
+
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--fontf);
+    line-height: 1.4;
+}
+
+/* Links */
+a {
+    color: inherit;
+    text-decoration: none;
+    font-family: var(--fontf);
+}
+
+/* Flexbox layout for containers */
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+/* Flex items should adapt */
+.flex-item {
+    flex: 1 1 100%; /* Take full width on mobile */
+    margin: 0.5rem;
+}
+
+
+

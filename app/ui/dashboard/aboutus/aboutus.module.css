@@ -1,0 +1,161 @@
+.aboutUsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #4e97da;
+  border-radius: 12px;
+}
+
+.content {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+  align-items:justify;
+}
+
+.headingContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0;
+}
+
+.highlight {
+  color: #e63946;
+}
+
+.paragraph {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.imageContainer {
+  margin-top: 30px;
+}
+
+.aboutImage {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.extraInfo {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 20px;
+}
+
+.mission,
+.vision {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.smallText {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 320px) {
+  
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .highlight {
+    font-size: 1.5rem;
+  }
+
+  .paragraph {
+    font-size: 0.9rem;
+  }
+
+  .aboutImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  .extraInfo {
+    flex-direction: column;
+    align-items: center;
+    margin: 0%;
+  }
+
+  .mission,
+  .vision {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .mission:last-child,
+  .vision:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .heading {
+    font-size: 1rem;
+  }
+
+  .highlight {
+    font-size: 1rem;
+  }
+
+  .paragraph {
+    font-size: .7rem;
+  }
+
+  .aboutImage {
+    width: 120px;
+    height: 120px;
+  }
+
+  .extraInfo {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .mission,
+  .vision {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .mission:last-child,
+  .vision:last-child {
+    margin-bottom: 0;
+  }
+  .smallText {
+    font-size: .7rem;
+}
+}

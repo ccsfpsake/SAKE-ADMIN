@@ -1,0 +1,762 @@
+.container {
+  background-color: var(--bgSoft);
+  border-radius: 12px;
+  margin: 20px auto;
+  width: 100%;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 95%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border: 1px solid #4e97da;
+  padding: 30px;
+}
+.selectedCompanyLayout {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+.companyGrid {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.companyCard {
+  background-color: #1976d2;
+  border: 1px solid #4e97da;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 300px;
+  color: white;
+}
+
+.companyCard:hover {
+  border-color: #4e97da;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.companyID {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.notificationDot {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  
+}
+
+.backButton {
+  background: none;
+  color: #4e97da;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.backButton:hover {
+  color: #1d5ea8;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.top h2{
+  color: #000000;
+  
+}
+
+.filterContainer {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 20px 0;
+}
+
+
+.historyLinkContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.historyLink {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #1b69df;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 5px;
+}
+
+.historyLink:hover {
+  background-color: #1460d1;
+}
+
+.historyLink button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #1b69df;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  border: #1b69df;
+}
+
+.historyLink button:hover {
+  background-color: #1460d1;
+}
+
+/* =============== Report List =============== */
+.reportList {
+  width: 30%;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #f7f7f7;
+  height: 100%;
+  max-height: 100%;
+}
+
+.reportList p {
+  margin-bottom: 3px;
+}
+
+.reportItem {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.reportItem:hover {
+  background-color: #f9f9f9;
+}
+
+.unread {
+  background-color: #c5e0f9;
+  border-left: 4px solid  #468ed2;
+}
+
+.selectedReport {
+  border: 2px solid #4e97da;
+  background-color: #eef7ff;
+}
+
+/* =============== Report Details =============== */
+.chatSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.reportTop {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  height: 37%;
+  overflow-y: auto;
+}
+
+.reportInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: justify;
+}
+
+.reportText {
+  flex: 1;
+  min-width: 200px;
+}
+
+.reportText p,
+.reportText h3 {
+  margin-bottom: 10px;
+}
+
+ .reportList h3 {
+  margin-bottom: 10px;
+ }
+.reportImage img {
+  border-radius: 8px;
+  max-width: 250px;
+  width: 100%;
+}
+
+/* =============== Chat Area =============== */
+.chatBox {
+  flex: 1;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.messageRow {
+  display: flex;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.messageBubble {
+  max-width: 60%;
+  background-color: #cce5ff;
+  border-radius: 15px;
+  padding: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: inline-block;
+}
+
+.media {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.docContainer {
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  margin-top: 8px;
+  word-break: break-word;
+  cursor: pointer;
+}
+
+.left .messageBubble {
+  background-color: #e2e2e2;
+}
+
+.messageBubble img {
+  margin-top: 5px;
+  max-width: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+}
+
+.messageBubble p {
+  margin: 0;
+}
+
+.right .messageBubble {
+  background-color: #cce5ff;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 18px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+/* =============== Message Status and Metadata =============== */
+.timestampTopCenter {
+  font-size: 0.75rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 0.2rem;
+}
+
+.dateDivider {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #888;
+  margin: 1rem 0 0.5rem;
+}
+
+.statusTag,
+.statusBottom {
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: 4px;
+  text-align: right;
+  margin-right: 12px;
+  font-style: italic;
+}
+
+.right .status {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.left .status {
+  justify-content: flex-start;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  gap: 4px;
+  color: #888;
+}
+
+.status svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* =============== Input Area =============== */
+.inputArea {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  position: sticky;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 10;
+  border-top: 1px solid #ddd;
+}
+
+.inputArea textarea {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: none;
+  height: auto;
+  max-height: 150px;
+  overflow-y: auto;
+  font-family: inherit;
+}
+
+.inputArea textarea:focus,
+.inputArea button:focus {
+  outline: 2px solid #ffffff;
+}
+
+.inputArea button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: #4e97da;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.inputArea button:hover {
+  background-color: #3a80c1;
+  transform: scale(1.05);
+}
+
+.inputArea button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.inputArea svg {
+  cursor: pointer;
+  color: white;
+  width: 22px;
+  height: 22px;
+}
+
+
+.previewAttachment {
+  margin-top: 0.75rem;
+  background-color: #f0f4f8;
+  padding: 0.75rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px dashed #aaa;
+  width: fit-content;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.preview {
+  max-height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Add this for text-based previews (like doc names) */
+.previewAttachment p {
+  margin: 0;
+  word-break: break-word;
+}
+
+/* Optional: a small filename label */
+.filenameLabel {
+  flex-grow: 1;
+  font-weight: 500;
+}
+
+/* Remove (X) button styling */
+.removePreviewButton {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.removePreviewButton:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Optional: a small filename label */
+.filenameLabel {
+  flex-grow: 1;
+  font-weight: 500;
+}
+
+/* Remove (X) button styling */
+.removePreviewButton {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.removePreviewButton:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
+.docContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f0f0f0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.docContainer p {
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.docContainer svg {
+  color: #333;
+}
+
+.typingIndicator {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #888;
+  margin-left: 1.5rem;
+  margin-top: 0.3rem;
+}
+
+.typingIndicator::after {
+  content: '...';
+  animation: dots 1.5s steps(3, end) infinite;
+}
+
+@keyframes dots {
+  0%, 20% { content: ''; }
+  40% { content: '.'; }
+  60% { content: '..'; }
+  80%, 100% { content: '...'; }
+}
+
+/* =============== Modal Styles =============== */
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  position: relative;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow: auto;
+  margin: 10px;
+}
+
+.modalContent img,
+.modalContent iframe {
+  margin-top: 20px;
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+
+.modalButtons {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 12px;
+  z-index: 1000;
+  background: none;
+}
+
+.modalIconButton {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.modalIconButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.settledButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-top: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.settleButton:hover {
+  background-color: #218838;
+}
+.loading,
+.noData {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 10px 0;
+}
+/* ======== Responsive Design ======== */
+@media (max-width: 768px) {
+  .selectedCompanyLayout {
+    flex-direction: row;
+    font-size: 15px;
+  }
+
+  .reportList {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .chatSection {
+    padding: 0.5rem;
+    width: 70%;
+  }
+
+  .reportTop {
+    height: 30%;
+  }
+
+  .filterContainer {
+    flex-wrap: wrap;
+  }
+
+  .previewArea {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .docContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+.modalContent {
+  margin: 20px;
+}
+  .modalContent img {
+    max-width: 100%;
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+    .selectedCompanyLayout {
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 15px;
+
+  }
+  .chatSection {
+    padding: 0.5rem;
+    width: 100%;
+    height: 70%;
+  }
+  .companyCard {
+    padding: 16px;
+  }
+
+  .reportList {
+    padding: 0.75rem;
+    width: 100%;
+  }
+  
+
+  .chatBox {
+    padding: 0.75rem;
+       width: 100%;
+    max-height: 80%;
+  }
+
+  .inputArea {
+    gap: 0.25rem;
+  }
+
+  .messageBubble {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    max-width: 90%;
+  }
+
+  .reportInfoContainer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .reportImage img {
+    max-width: 100%;
+  }
+
+  .top h2 {
+    font-size: 1.2rem;
+  }
+
+  .historyLink {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .companyCard {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+
+  .inputArea button,
+  .inputArea textarea {
+    font-size: 0.85rem;
+  }
+
+  .messageBubble {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+
+  .status {
+    font-size: 0.7rem;
+    gap: 2px;
+  }
+
+  .typingIndicator {
+    font-size: 0.75rem;
+  }
+
+  .historyLink {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .reportText h3 {
+    font-size: 1rem;
+  }
+
+  .top h2 {
+    font-size: 1rem;
+  }
+}
