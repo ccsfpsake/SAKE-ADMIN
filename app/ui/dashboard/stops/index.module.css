@@ -42,13 +42,18 @@
 
 
 .lineCard {
-  background-color: #f7f4f4;
+  background-color: #1976d2;
   border: 1px solid #4e97da;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
+  position: relative;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  max-width: 300px;
+  color: white;
+  box-sizing: border-box;
 }
 
 .lineCard:hover {
@@ -57,7 +62,7 @@
 }
 
 .lineCard h3 {
-  color: #0d47a1;
+  color: #fbfbfb;
   margin-bottom: 10px;
 }
 .h3 {

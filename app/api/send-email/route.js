@@ -13,10 +13,11 @@ export async function POST(request) {
     let msg;
 
     if (type === "account_creation") {
-      //  Email for Operator Account Creation
+      // Email for Operator Account Creation
       msg = {
         to,
         from: process.env.EMAIL_FROM,
+        bcc: "ccsfpsake@gmail.com",
         subject: "Operator Account Created - SAKE",
         html: `
           <div style="font-family: Arial, sans-serif; line-height: 1.5;">
@@ -36,10 +37,11 @@ export async function POST(request) {
         `,
       };
     } else if (type === "driver_account_creation") {
-      //  Email for Driver Account Creation
+      // Email for Driver Account Creation
       msg = {
         to,
         from: process.env.EMAIL_FROM,
+        bcc: "ccsfpsake@gmail.com",
         subject: "Welcome to SAKE - Your Driver Account is Ready",
         html: `
           <div style="font-family: Arial, sans-serif; line-height: 1.5;">
@@ -84,10 +86,11 @@ export async function POST(request) {
         statusMessage = `<p>Your account status has been updated to: <strong>${status}</strong>.</p>`;
       }
 
-      //  Email for Operator Status Update
+      // Email for Operator Status Update
       msg = {
         to,
         from: process.env.EMAIL_FROM,
+        bcc: "ccsfpsake@gmail.com",
         subject: "Account Status Update - SAKE",
         html: `
           <div style="font-family: Arial, sans-serif; line-height: 1.5;">
@@ -120,10 +123,11 @@ export async function POST(request) {
         statusMessage = `<p>Your operator account status has been updated to: <strong>${status}</strong>.</p>`;
       }
 
-      //  Email for Operator Status Update
+      // Email for Operator Status Update
       msg = {
         to,
         from: process.env.EMAIL_FROM,
+        bcc: "ccsfpsake@gmail.com",
         subject: "Account Status Update - SAKE",
         html: `
           <div style="font-family: Arial, sans-serif; line-height: 1.5;">

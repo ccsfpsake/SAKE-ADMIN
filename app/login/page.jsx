@@ -61,7 +61,7 @@ const LoginPage = () => {
       }
 
       await signInWithEmailAndPassword(auth, normalizedEmail, password);
-      sessionStorage.setItem("isLoggingIn", "true");
+      sessionStorage.setItem("isLoggedIn", "true");
       router.push("/dashboard");
 
     } catch (error) {

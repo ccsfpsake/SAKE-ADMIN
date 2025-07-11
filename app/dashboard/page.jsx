@@ -11,32 +11,21 @@ import Dashboardroute from "./routes/dashboardroute/page";
 import Usergraph from "./graph/users/page";
 import OperatorStatusSummary from "./graph/OperatorStatusSummary/page";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
-
 const Dashboard = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isAllowed, setIsAllowed] = useState(false);
 
   useEffect(() => {
-    const isLoggingIn = sessionStorage.getItem("isLoggingIn");
-    if (isLoggingIn) {
-      setIsLoading(true);
-      const timer = setTimeout(() => {
-        sessionStorage.removeItem("isLoggingIn");
-        setIsLoading(false);
-      }, 1000); // Simulated delay. Adjust if needed.
-      return () => clearTimeout(timer);
+    const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+
+    if (!isLoggedIn) {
+      window.location.href = "/";
+    } else {
+      setIsAllowed(true);
     }
   }, []);
 
-  if (isLoading) {
-    return (
-      <div className={styles.spinnerContainer}>
-        <FontAwesomeIcon icon={faSpinner} spin size="3x" />
-        <p>Loading dashboard...</p>
-      </div>
-    );
-  }
+  // 🔒 Don't render anything while verifying
+  if (!isAllowed) return null;
 
   return (
     <div className={styles.container}>
